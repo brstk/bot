@@ -7,7 +7,6 @@ const bot = new Telegraf(process.env.BOT_TOKEN);
 bot.start((ctx) => ctx.reply(`Привет, ${ctx.message.from.first_name ? ctx.message.from.first_name : 'незнакомец'} ! Отправь свою геолокацию  `));
 bot.help((ctx) => ctx.reply(text.commands));
 
-
 bot.on('message', async (ctx) => {
   if (ctx.message.location) {
     console.log(ctx.message.location);
